@@ -1,0 +1,13 @@
+
+.heading{
+    font-size: large;
+    width: 100%;
+    margin: 0px;
+}
+.notas{
+    color: yellow;
+}
+canvas{
+    border: 15px;
+    border-style:double;
+}
