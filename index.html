@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>APP WEB MUSICA COM IA</title>
+	<title>APP WEB DJ COM IA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -12,20 +12,28 @@
   <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="style.css">
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.js"></script>
 </head>
-<body background="download-5.jpg">
+<body background="background.jpg">
 <center>
-  
-  	<h3 class="btn btn-info heading">APP WEB MUSICA COM IA  
+  	<h3 class="btn btn-info heading">APP WEB DJ COM IA
 	    <br>
-	    <span class="notas">toque musicas com seu braco!</span>
+	    <span class="note">OBSERVAÇÃO: Mova seu pulso esquerdo para cima e para baixo para controlar o volume.
+        Mova seu pulso direito para controlar a velocidade.</span>
   	</h3>
-  <button class="btn btn-success" onclick=play()>REPRODUZIR</button>
-  <div class="div">
+	<br><br>
+  <button class="btn btn-success" onclick="tocar()">REPRODUZIR</button>
+  <div class="divS">
+    <img src="disk.gif" class="divSIMAGE">
     <br>
+    <h6 class="btn btn-danger" id="speed">velocidade</h6>
   </div>
- 
+  
+  <div class="divV">
+    <img src="disk.gif" class="divSIMAGE">
+    <br>
+    <h6 class="btn btn-danger" id="volume">volume</h6>
+  </div>
 </center>
 
 <script src="main.js"></script>
