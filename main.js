@@ -19,9 +19,16 @@ function setup(){
 }
 function draw(){
     image(video,0,0,400,400)
-
+    fill("#FF0000")
+    stroke("#FF0000")
+    circle(leftWristX,leftWristY,20)
+    InNumberleftWristY=Number(leftWristY)
+    removeDecimais=floor(InNumberleftWristY)
+    volume=removeDecimais/500
+    document.getElementById("volume").innerHTML="volume="+volume
+    musica.setVolume(volume)
 }
-function play(){
+function tocar(){
     musica.play()
     musica.setVolume(1)
     musica.rate(1)
@@ -34,6 +41,13 @@ function gotPoses(results){
         console.log(results)
         scoreRightWrist=results[0].pose.keypoints[10].score
         scoreLeftWrist=results[0].pose.keypoints[9].score
+        rightWristX=results[0].pose.rightWrist.x
+        rightWristY=results[0].pose.rightWrist.y
+        leftWristX=results[0].pose.leftWrist.x
+        leftWristY=results[0].pose.leftWrist.y
+ }
+}
+ts[9].score
         rightWristX=results[0].pose.rightWrist.x
         rightWristY=results[0].pose.rightWrist.y
         leftWristX=results[0].pose.leftWrist.x
